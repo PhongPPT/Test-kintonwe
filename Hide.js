@@ -10,9 +10,9 @@
 
   kintone.events.on(events, async function (event) {
     const record = event.record;
-
+    
     let AppID = kintone.app.getId();
-
+    
     let GETFIELD = await kintone.api("/k/v1/preview/app/form/fields", "GET", {
       app: AppID,
     });
