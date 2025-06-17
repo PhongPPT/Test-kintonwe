@@ -1,0 +1,9 @@
+{
+    "liveServer.settings.https": {
+        "enable": true,
+        "cert": "C:\\Users\\PC0001\\Downloads\\Test\\.vscode\\localhost.pem",
+        "key": "C:\\Users\\PC0001\\Downloads\\Test\\.vscode\\localhost.key",
+        "passphrase": "12345"
+    },
+    "editor.fontSize": 14
+}
