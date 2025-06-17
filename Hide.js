@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  // event
   const events = [
     "app.record.create.show",
     "app.record.index.show",
@@ -9,10 +10,11 @@
   ];
 
   kintone.events.on(events, async function (event) {
-    const record = event.record;
 
+    // get appID
     let AppID = kintone.app.getId();
 
+    // get field 
     let GETFIELD = await kintone.api("/k/v1/preview/app/form/fields", "GET", {
       app: AppID,
     });
@@ -20,6 +22,7 @@
     const fieldCodes = ["RefKey", "RefRecordNo"];
     let hasFieldCode = true;
 
+    // Check field to match fieldCodes
     for (const code of Object.keys(GETFIELD.properties)) {
       let field = GETFIELD.properties[code];
 
@@ -29,6 +32,7 @@
       }
     }
 
+    // check hasFieldCode = false to remove
     if (!hasFieldCode) {
       const addButton = document.querySelector(".gaia-argoui-app-menu-add");
       if (addButton) {
@@ -41,7 +45,7 @@
     elements.forEach((element) => {
       element.remove();
     });
-
+//
     const recordRows = document.querySelectorAll(".recordlist-row-gaia");
     recordRows.forEach((row) => {
       row.addEventListener(
