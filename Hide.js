@@ -24,6 +24,7 @@
 
     // Check field to match fieldCodes
     for (const code of Object.keys(GETFIELD.properties)) {
+      
       let field = GETFIELD.properties[code];
 
       if (fieldCodes.includes(field.code)) {
@@ -45,7 +46,7 @@
     elements.forEach((element) => {
       element.remove();
     });
-//
+
     const recordRows = document.querySelectorAll(".recordlist-row-gaia");
     recordRows.forEach((row) => {
       row.addEventListener(

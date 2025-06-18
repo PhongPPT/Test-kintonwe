@@ -10,5 +10,7 @@
     console.log("record", record)
     const HearSpace = kintone.app.getHeaderSpaceElement()
     console.log("HearSpace", HearSpace)
+    testtestestsetsetetetestestestestsetetestst
+    fdsfdfsfdfffdsfdsfdfsdfsdfsdfdsffdsfdsfffsdffddsfdsfdsfsdfsf
   })
 });
